@@ -2,6 +2,9 @@
 
 import unittest
 from unittest.mock import patch, mock_open
+import pytest
+
+pytest.importorskip("torch")
 
 from src.utils.version import get_version, get_version_info, display_version_info
 

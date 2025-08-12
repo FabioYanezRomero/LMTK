@@ -4,8 +4,11 @@ Unit tests for FSDP to HuggingFace format conversion
 import os
 import unittest
 import tempfile
-import torch
 from unittest.mock import patch, MagicMock, mock_open
+import pytest
+
+torch = pytest.importorskip("torch")
+pytest.importorskip("box")
 from box import Box
 
 from src.tasks.publish.format.fsdp import ConvertFSDPCheckpoint
