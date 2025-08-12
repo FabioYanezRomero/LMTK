@@ -3,6 +3,11 @@ Unit tests for HuggingFace upload functionality
 """
 import unittest
 from unittest.mock import patch, MagicMock
+import pytest
+
+pytest.importorskip("box")
+pytest.importorskip("transformers")
+pytest.importorskip("torch")
 from box import Box
 
 from src.tasks.publish.upload.huggingface import UploadHuggingface
